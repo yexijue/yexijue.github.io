@@ -33,27 +33,22 @@
     <!-- meta -->
 
 
-<title>第一篇Hexo博客 | Hexo</title>
+<title>Pages | Hexo</title>
 
-
-    <meta name="keywords" content="LaTeX">
 
 
 
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="$ E&#x3D;mc^2 $">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第一篇Hexo博客">
-<meta property="og:url" content="http://example.com/2025/12/23/%E7%AC%AC%E4%B8%80%E7%AF%87Hexo%E5%8D%9A%E5%AE%A2/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Pages">
+<meta property="og:url" content="http://example.com/page/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="$ E&#x3D;mc^2 $">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-12-22T21:47:10.000Z">
-<meta property="article:modified_time" content="2025-12-22T22:05:17.989Z">
+<meta property="article:published_time" content="2025-12-24T14:14:48.000Z">
+<meta property="article:modified_time" content="2025-12-24T14:22:50.123Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary_large_image">
 
 
@@ -150,10 +145,10 @@
 
 <div class="post-title">
     <h1 class="post-title__text">
-        第一篇Hexo博客
+        Pages
     </h1>
     <div class="post-title__meta">
-        <a href="/archives/2025/12/" class="post-meta__date button">2025-12-23</a>
+        <a href="/archives/2025/12/" class="post-meta__date button">2025-12-24</a>
         
  
         
@@ -193,7 +188,7 @@
     </div>
     <script>
         (() => {
-            var update = Date.parse("2025-12-23"),
+            var update = Date.parse("2025-12-24"),
                 date = new Date(),
                 now = date.getTime(),
                 expire = now - update,
@@ -206,51 +201,13 @@
     </script>
 </div>
     <div class="post__content">
-        <p>$ E&#x3D;mc^2 $</p>
-
+        
     </div>
      
-    <div class="post-footer__meta"><p>updated at 2025-12-23</p></div> 
-    <div class="post-entry__tags"><a href="/tags/LaTeX/" class="post-tags__link button"># LaTeX</a></div> 
+    <div class="post-footer__meta"><p>updated at 2025-12-24</p></div> 
+    <div class="post-entry__tags"></div> 
 </article>
 
-
-    <div class="nav">
-        <div class="nav__prev">
-            
-                <a href="/2025/12/24/Offer-day/" class="nav__link">
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                    </div>
-                    <div>
-                        <div class="nav__label">
-                            Previous Post
-                        </div>
-                        <div class="nav__title">
-                            Offer day
-                        </div>
-                    </div>
-                </a>
-            
-        </div>
-        <div class="nav__next">
-            
-                <a href="/2025/12/23/hello-world/" class="nav__link">
-                    <div>
-                        <div class="nav__label">
-                            Next Post
-                        </div>
-                        <div class="nav__title">
-                            Hello World
-                        </div>
-                    </div>
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
-                    </div>
-                </a>
-            
-        </div>
-    </div>
 
 
 
@@ -375,56 +332,6 @@
     </script>
  
 
-
-    <script>
-        if (typeof MathJax === 'undefined') {
-            window.MathJax = {
-                loader: {
-                    source: {
-                        '[tex]/amsCd': '[tex]/amscd',
-                        '[tex]/AMScd': '[tex]/amscd'
-                    }
-                },
-                tex: {
-                    inlineMath: {'[+]': [['$', '$']]},
-                    tags: 'ams'
-                },
-                options: {
-                    renderActions: {
-                        findScript: [10, doc => {
-                            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                                const display = !!node.type.match(/; *mode=display/);
-                                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                                const text = document.createTextNode('');
-                                node.parentNode.replaceChild(text, node);
-                                math.start = {node: text, delim: '', n: 0};
-                                math.end = {node: text, delim: '', n: 0};
-                                doc.math.push(math);
-                            });
-                        }, '', false],
-                        insertedScript: [200, () => {
-                            document.querySelectorAll('mjx-container').forEach(node => {
-                                let target = node.parentNode;
-                                if (target.nodeName.toLowerCase() === 'li') {
-                                    target.parentNode.classList.add('has-jax');
-                                }
-                            });
-                        }, '', false]
-                    }
-                }
-            };
-            (function () {
-                var script = document.createElement('script');
-                script.src = "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js";
-                script.defer = true;
-                document.head.appendChild(script);
-            })();
-        } else {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-        }
-    </script>
  
 
  

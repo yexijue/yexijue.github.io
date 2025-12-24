@@ -16,8 +16,16 @@
     <!--icon-->
 
     
+        <link rel="shortcut icon" href="/themes%5Ccards%5Csource%5Cimage%5Cleaf-removebg-preview.ico">
     
     
+        <link rel="icon" type="image/png" sizes="16x16" href="https://s2.loli.net/2025/12/24/KqfnGiHmP82ELwe.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="https://s2.loli.net/2025/12/24/KqfnGiHmP82ELwe.png">
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="https://s2.loli.net/2025/12/24/KqfnGiHmP82ELwe.png">
     
     
 
@@ -54,6 +62,13 @@
  
 
     
+    
+        <link rel="stylesheet" id="hl-default-theme" href="https://unpkg.com/hexo-theme-cards@1.4/dist/css/highlight/default.min.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="https://unpkg.com/hexo-theme-cards@1.4/dist/css/highlight/dark.min.css" media="none">
+        
+    
+
     
     
 
@@ -170,7 +185,26 @@
 
 
 <article class="post post__with-toc content-card">
-    <div class="post__header"></div>
+    <div class="post__header">
+    <div class="post__expire" id="post-expired-notify">
+        <p>
+            This article was last updated on &lt;span id=&#34;expire-date&#34;&gt;&lt;/span&gt; days ago, the information described in the article may be outdated.
+        </p>
+    </div>
+    <script>
+        (() => {
+            var update = Date.parse("2025-12-24"),
+                date = new Date(),
+                now = date.getTime(),
+                expire = now - update,
+                expire_days = Math.floor(expire/(24*3600*1000));
+            if (expire_days >= 120) {
+                document.querySelectorAll('#expire-date')[0].innerHTML = expire_days;
+                document.querySelectorAll('#post-expired-notify')[0].style.display = 'block';
+            }
+        })();
+    </script>
+</div>
     <div class="post__content">
         <p>yep</p>
 
@@ -205,6 +239,29 @@
     </div>
 
 
+
+    <div class="post__comments post__with-toc content-card" id="comment">
+        
+    <h4>Comments</h4>
+    
+    
+    
+    <div id="valine_container" class="valine_thread"></div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    </div>
 
 
 
@@ -317,6 +374,64 @@
 
  
 
+
+    
+
+    
+
+    
+    
+    <script>
+        function loadComment() {
+            let e;
+            (e = document.createElement("script")).src = 'https://unpkg.com/valine@1.4.14/dist/Valine.min.js',
+            document.body.appendChild(e);
+            e.onload = () => {
+                var valineConfig = {"appId":"8BgGNTJvpKUZ6NedGl4NtwV7-gzGzoHsz","appKey":"soAckiBQtMROLRfbq3EMdDc7","placeholder":null,"path":"window.location.pathname","avatar":"robohash","meta":["nick","mail","link"],"pageSize":8,"lang":"zh-CN","visitor":true,"highlight":false,"avatarForce":false,"recordIP":false,"serverURLs":null,"enableQQ":null,"requiredFields":["nick","mail"],"emojiCDN":null,"emojiMaps":null};
+                valineConfig.el = '#valine_container';
+                for (var i in valineConfig) {
+                    if (valineConfig[i] === null) delete valineConfig[i];
+                }
+                new Valine(valineConfig);
+            };
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
+    </script>
+
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
 
 
 
